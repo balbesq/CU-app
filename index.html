@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="main.css" />
+        <title>PROD 2</title>
+    </head>
+    <body>
+        <main class="container">
+            <h1 class="title" test-id="list-title">Добро пожаловать</h1>
+            <p class="subtitle" test-id="list-subtitle">Сайт посвящен прохождению тестов. Выберите тест, который хотите пройти.</p>
+            
+            <div class="tests-list" test-id="list-items">
+                <!-- Тесты будут добавляться здесь динамически -->
+            </div>
+    
+
+            <button class="add-test-button" test-id="list-add-button">+</button>
+        </main>
+        <!-- Модальное окно создания теста -->
+        <div class="modal-overlay" test-id="form-modal" id="createTestModal" style="display: none;">
+            <div class="modal">
+                <h2 test-id="form-title">Создание теста</h2>
+                <div class="form-content">
+                    <div class="form-group">
+                        <label>Укажите название теста</label>
+                        <input type="text" test-id="new-test-title" class="form-input" placeholder="Введите название теста">
+                    </div>
+                
+                    <div class="questions-container">
+                        <!-- Вопросы будут добавляться динамически -->
+                    </div>
+                
+                    <button test-id="save-button" class="save-button">Сохранить</button>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

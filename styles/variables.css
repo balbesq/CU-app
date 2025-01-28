@@ -1,0 +1,13 @@
+:root {
+    --color-positive-status: #ccffb6;
+    --color-negative-status: #ffb6b6;
+    --color-hover-state: #efefef;
+    --color-border-color: #7b7b7b;
+    --color-modal-overlay: rgba(0, 0, 0, 0.5);
+
+    --disabled-opacity: 0.5;
+
+    --icon-arrow-left: '⬅';
+    --icon-arrow-right: '⮕';
+    --icon-delete: '🗑';
+}

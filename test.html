@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Прохождение теста</title>
+</head>
+<body>
+    <div class="test-page">
+
+        <!-- Левая панель с навигацией по вопросам-->
+        <aside class="test-navigation">
+            <div class="nav-header" test-id="navigation-item">
+                Тесты
+            </div>
+            <div class="questions-list">
+                <!-- Вопросы будут добавляться динамически -->
+            </div>
+        </aside>
+
+        <!-- Основной контент -->
+        <main class="test-content">
+            <h1 class="test-title"></h1>
+            
+            <div class="question-container">
+                <h2 class="question-text" test-id="question"></h2>
+                <div class="options-container" test-id="options">
+                    <!-- Варианты ответов будут добавляться динамически -->
+                </div>
+            </div>
+
+            <!-- Кнопки навигации по вопросам -->
+            <div class="navigation-controls">
+                <div class="arrows-container">
+                    <button class="nav-button" test-id="prev-question"></button>
+                    <button class="nav-button" test-id="next-question"></button>
+                </div>
+                <button class="finish-button" test-id="finish-button">
+                    Завершить
+                </button>
+            </div>  
+        </main>
+
+        <!-- Модальное окно подтверждения завершения теста-->
+        <div class="modal-overlay" test-id="modal" id="confirmModal" style="display: none;">
+            <div class="modal">
+                <h2>Вы точно хотите завершить тест?</h2>
+                <div class="modal-buttons">
+                    <button class="modal-button" id="confirmYes">Да</button>
+                    <button class="modal-button" id="confirmNo">Нет</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модальное окно с результатами -->
+        <div class="modal-overlay" test-id="modal" id="resultsModal" style="display: none;">
+            <div class="modal">
+                <h2 class="modal-title">Вы завершили тест</h2>
+                <div class="results-content">
+                    <p>Правильных ответов - <span id="correctAnswers">0</span></p>
+                    <p>Неправильных ответов - <span id="incorrectAnswers">0</span></p>
+                    <p id="unansweredContainer">Вопросов без ответа - <span id="unansweredQuestions">0</span></p>
+                </div>
+                <button class="modal-button" id="understandButton" test-id="reset-test-button">Понятно</button>
+            </div>
+        </div>
+
+        <!-- Окно с подтверждением перепрохождения теста -->
+        <div class="modal-overlay" test-id="modal" id="restartConfirmModal" style="display: none;">
+            <div class="modal">
+                <h2>Вы точно хотите перепройти тест?</h2>
+                <div class="modal-buttons">
+                    <button class="modal-button" id="restartYes">Да</button>
+                    <button class="modal-button" id="restartNo">Нет</button>
+                </div>
+            </div>
+        </div>
+    <script src="test.js"></script>
+</body>
+</html>
